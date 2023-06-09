@@ -54,9 +54,6 @@ dependencies {
         implementation(navigation)
     }
 
-    implementation("androidx.legacy:legacy-support-v4:1.0.0")
-    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.6.1")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1")
     Dependencies.UiComponents.apply {
         implementation(core)
         // AppCompat
@@ -73,8 +70,6 @@ dependencies {
         implementation(hilt)
         kapt(hiltCompiler)
     }
-// Domain
-    implementation(project (":domain"))
 
     // Retrofit
     implementation ("com.squareup.retrofit2:retrofit:2.9.0")

@@ -11,6 +11,7 @@ plugins {
 dependencies{
 
     implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
+    implementation ("javax.inject:javax.inject:1")
 
 }
 java {

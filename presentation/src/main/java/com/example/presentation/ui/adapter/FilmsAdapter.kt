@@ -7,10 +7,10 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.presentation.databinding.ItemFilmsBinding
-import com.example.presentation.models.FilmsResponseUi
+import com.example.presentation.models.FilmsResponseUI
 
 class FilmsAdapter :
-    ListAdapter<FilmsResponseUi, FilmsAdapter.FilmsViewHolder>(diffUtil) {
+    ListAdapter<FilmsResponseUI, FilmsAdapter.FilmsViewHolder>(diffUtil) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FilmsViewHolder {
         return FilmsViewHolder(
@@ -28,7 +28,7 @@ class FilmsAdapter :
 
     class FilmsViewHolder(private val binding: ItemFilmsBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun onBind(item: FilmsResponseUi) {
+        fun onBind(item: FilmsResponseUI) {
             binding.tvTitle.text =item.title
             binding.tvOriginalTitle.text =item.originalTitle
         }
@@ -36,13 +36,13 @@ class FilmsAdapter :
     }
 
     companion object {
-        val diffUtil = object : DiffUtil.ItemCallback<FilmsResponseUi>() {
-            override fun areItemsTheSame(oldItem: FilmsResponseUi, newItem: FilmsResponseUi): Boolean {
+        val diffUtil = object : DiffUtil.ItemCallback<FilmsResponseUI>() {
+            override fun areItemsTheSame(oldItem: FilmsResponseUI, newItem: FilmsResponseUI): Boolean {
                 return oldItem.title == newItem.title
             }
 
             override fun areContentsTheSame(
-                oldItem: FilmsResponseUi, newItem: FilmsResponseUi
+                oldItem: FilmsResponseUI, newItem: FilmsResponseUI
             ): Boolean {
                 return oldItem == newItem
             }
